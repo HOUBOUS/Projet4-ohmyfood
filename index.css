@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+body {
+  margin: 0px;
+}
+
+header {
+  position: relative;
+  margin: Opx;
+  font-family: "shrikhand", sans-serif;
+  text-align: center;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2470588235);
+  padding: 3px;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+}
+main .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAEAEA;
+  padding: 15px;
+  gap: 17px;
+}
+main .location p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/*Explorer*/
+.explorer {
+  text-align: center;
+}
+.explorer p {
+  font-weight: 300;
+  font-size: 18px;
+}
+.explorer button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 29px 35px;
+  border-radius: 25px;
+  border: none;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 27px;
+}
+
+/*Choice*/
+.choice {
+  padding: 105px 20px;
+}
+.choice .choice_title {
+  padding-left: 20px;
+}
+.choice ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  flex-direction: column;
+  list-style-type: none;
+  counter-reset: compteListe;
+}
+.choice ol li {
+  background-color: #f6f6f6;
+  padding: 28px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.choice ol li::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  color: #FFFFFF;
+  background-color: #9356DC;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 47px;
+}
+.choice ol li i.fa-solid {
+  margin-right: 27px;
+}
+
+.menus {
+  background: #D2D2D2;
+}
+.menus .cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 251px;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  border: 5px solid red;
+}
+.menus .cards img {
+  border-radius: 20px 0px 0px 20px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+}
+
+/*# sourceMappingURL=index.css.map */

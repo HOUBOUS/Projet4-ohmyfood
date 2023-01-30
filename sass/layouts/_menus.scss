@@ -1,0 +1,45 @@
+.menus{
+    background: #D2D2D2;
+    margin-bottom: 2rem;
+    border: 20px solid black;
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .cards{
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        min-width: 30rem;
+        flex-grow: 1;
+        border-radius: 15px;
+
+        
+       
+           .card{
+            border:1px solid blue;
+            flex-basis: 85%;
+            height: 251px;
+            display: flex;
+            flex-direction: column;
+
+                .card_img{
+                border-radius: 20px 0px 0px 20px;
+                height: 80%;
+                width: 100%;
+                object-fit: cover;
+                background-position: center;
+                }
+                .card_text{
+                    list-style: none;
+
+                }
+
+            }
+        }
+    }
+
