@@ -3,13 +3,13 @@
     margin-bottom: 2rem;
     border: 20px solid black;
 
-    a{
+    & a{
         color: inherit;
         text-decoration: none;
     }
 
     .cards{
-        height: 25rem;
+        height: 15rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -20,7 +20,7 @@
 
         
        
-           .card{
+           &.card{
             border:1px solid blue;
             flex-basis: 85%;
             height: 251px;
@@ -28,9 +28,9 @@
             flex-direction: column;
 
                 .card_img{
-                border-radius: 20px 0px 0px 20px;
+                border-radius: 20px 20px 0px 0px 0px 20px;
                 height: 80%;
-                width: 100%;
+                width: 30%;
                 object-fit: cover;
                 background-position: center;
                 }

@@ -1,50 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
-@import "./sass/base/_base.scss"
-
-main{
-    font-family: "Roboto", sans-serif;
-    .location{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #EAEAEA;
-        padding: 15px;
-        gap: 17px;
-
-        p{
-            font-weight: 500;
-            font-size: 16px;
-        }
-     }
-    
-}
-
-
-
-/*Explorer*/
-
-.explorer{
-    text-align: center;
-
-    p{
-    font-weight: 300;
-    font-size: 18px;
-    }
-
-    button{
-    font-weight: 500;
-    font-size: 16px;
-    color: #FFFFFF;
-    padding: 29px 35px;
-    border-radius: 25px;
-    border: none;
-    background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    margin-top: 27px;
-
-    } 
-  }
+@import "./sass/base/_base.scss";
+@import "./sass/layouts/_header.scss";
+@import "./sass/layouts/_location.scss";
+@import "./sass/layouts/_menus.scss";
+@import ".sass/layouts/_explorer.scss";
 
   /*Choice*/
 
