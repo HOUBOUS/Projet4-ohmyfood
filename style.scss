@@ -2,53 +2,11 @@
 @import "./sass/layouts/_header.scss";
 @import "./sass/layouts/_location.scss";
 @import "./sass/layouts/_menus.scss";
-@import ".sass/layouts/_explorer.scss";
+@import "./sass/layouts/_explorer.scss";
+@import "./sass/layouts/_choice.scss";
+@import "./sass/layouts/_footer.scss";
 
-  /*Choice*/
 
-.choice{ 
-    padding: 105px 20px;
-
-    .choice_title{
-        padding-left: 20px;
-    }
-
-    ol{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    flex-direction: column;
-    list-style-type: none;
-    counter-reset: compteListe;
-
-    li{
-    background-color: #f6f6f6;
-    padding: 28px 30px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    &::before{
-        counter-increment: compteListe 1; 
-        content: counter(compteListe) " ";
-        color: #FFFFFF;
-        background-color: #9356DC;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 47px;
-        
-    }
-    i.fa-solid{
-        margin-right: 27px;
-
-    }
-    }
-     
-  }
-}
 
 
     

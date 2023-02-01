@@ -1,45 +1,115 @@
+
 .menus{
+    height: 77rem;
     background: #D2D2D2;
-    margin-bottom: 2rem;
-    border: 20px solid black;
+    font-family: "Roboto", sans-serif;
+    padding: 0 20px 0 20px;
 
-    & a{
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .cards{
-        height: 15rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        min-width: 30rem;
-        flex-grow: 1;
-        border-radius: 15px;
-
+   
+    .menus_restaurants{
         
-       
-           &.card{
-            border:1px solid blue;
-            flex-basis: 85%;
-            height: 251px;
-            display: flex;
-            flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 26px;
+        min-width: 20rem;
+      @media screen and (min-width: 992px) {
+        flex-direction: row;
+        
+      }
 
-                .card_img{
-                border-radius: 20px 20px 0px 0px 0px 20px;
-                height: 80%;
-                width: 30%;
-                object-fit: cover;
-                background-position: center;
-                }
-                .card_text{
-                    list-style: none;
-
-                }
+            .newIcon{
+               position: relative;
 
             }
-        }
-    }
+            
 
+            .newIcon::before{
+                   content: "nouveau";
+                   position: absolute;
+                   height: 29px;
+                   width: 80px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   color: #008766;
+                   background: #99E2D0;
+                   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+                   right: 1rem;
+                   top: 1rem;
+            }
+        }
+   
+           .card{
+              height: 251px;
+              flex-grow: 1;
+              background: #FFFFFF;
+              border-radius: 15px;
+              
+              & .card_img1{
+                background-image: url("./public/ressources/images/restaurants/Restaurant1.jpg");
+                background-size: cover;
+                height: 70%;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+
+              }
+
+              & .card_img2{
+                background-image: url("./public/ressources/images/restaurants/Restaurant2.jpg");
+                background-size: cover;
+                height: 70%;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+
+              }
+              
+              & .card_img3{
+                background-image: url("./public/ressources/images/restaurants/Restaurant3.jpg");
+                background-size: cover;
+                height: 70%;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+
+              }
+
+              & .card_img4{
+                background-image: url("./public/ressources/images/restaurants/Restaurant4.jpg");
+                background-size: cover;
+                height: 70%;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+
+              }
+
+              & .card_text{
+                margin: 0.5rem;
+                position: relative;
+
+                h3,p{
+                    margin: 0;
+                padding-top: 0.5rem;
+            }
+
+                p{
+                    font-weight: 300;
+                    font-size: 17px;
+                    
+
+                }
+
+                i{
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 1.5rem;
+                    top: 1rem;
+                 .fas{
+                    background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
+                 }
+                }
+              }
+
+            }
+        
+      
+    }
