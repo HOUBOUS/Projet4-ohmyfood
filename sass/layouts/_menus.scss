@@ -5,6 +5,11 @@
     font-family: "Roboto", sans-serif;
     padding: 0 20px 0 20px;
 
+    @media screen and (min-width: 992px) {
+        height: 430px;
+        
+      }
+
    
     .menus_restaurants{
         
@@ -103,13 +108,29 @@
                     position: absolute;
                     right: 1.5rem;
                     top: 1rem;
-                 .fas{
-                    background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
-                 }
                 }
-              }
+            }
+
+                .fas{
+                    opacity: 0;
+
+                 }
+
+                 .fas:hover{
+                    color: transparent;
+                    background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1)); 
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 1;
+                    cursor: pointer;
+
+                   
+
+                }
+               
 
             }
         
       
     }
+
