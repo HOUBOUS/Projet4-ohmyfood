@@ -1,17 +1,87 @@
-img{
+.band img{
     width: 100%;
-    height: 275px;
+    height: 300px;
     object-fit: cover;
     background-position: center;
     
 }
 
-main.h2{
+.resto1 {
+    margin-top: -30px;
+    
+ h2{
     font-family: "shrikhand", sans-serif;
-    width: 100%;
-    background-color: red;
+    padding: 30px 15px;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+    background: #F6F6F6;
+ 
+  }
 
 }
 
+.menus_resto1{
+    padding: 16px;
+    background: #F6F6F6;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+        
+      }
+
+    .menus_part{
+        background: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+        .menu_details{
+            display: flex;
+            overflow: hidden;
+            
+           .menu_details_informations{
+            padding: 16px;
+           }
+
+            .price{
+                display: flex;
+                align-items: flex-end;
+                margin-left: auto;
+                font-weight: bold;
+                padding: 15px;
+                
+            }
+
+            .menu_details_hover{
+                background: #99E2D0;
+                border-radius: 0px 15px 15px 0px;
+                margin-right: -59px;
+                width: 59px;
+                transition: margin-right 1s;
+                display: grid;
+                place-items: center;
+
+            }
+
+            &:hover .menu_details_hover{
+                margin-right: 0px;
+
+            }
+            i{
+                
+                background: #FFFFFF;
+               
+                width: 20px;
+                border-radius: 50%;
+
+            }
+        }
+
+    }
+
+    
+}
 
 
