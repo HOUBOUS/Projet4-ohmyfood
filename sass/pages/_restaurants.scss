@@ -7,7 +7,7 @@
     
 }
 
-.resto1 {
+.resto {
     margin-top: -30px;
     
  h2{
@@ -21,16 +21,26 @@
 
 }
 
-.menus_resto1{
+.menus_resto
+{
     padding: 16px;
     background: #F6F6F6;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 15px;
 
+   
+  
+
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+        
+      }
+
     h3{
         text-transform: uppercase;
         font-weight: 400;
+        position: relative;
 
        &::after {
         content: "";
@@ -38,16 +48,12 @@
         width: 40px;
         background-color:#99E2D0;
         position: absolute;
-        top: 503px;
-        left: 16px;
+        top: 1.5rem;
+        left: 0rem;
 
         }
-    }
 
-    @media screen and (min-width: 992px) {
-        grid-template-columns: repeat(3, 1fr);
-        
-      }
+    }
 
     .menus_part{
         background-color: #FFFFFF;

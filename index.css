@@ -276,10 +276,10 @@ footer .footer_lists {
   background-position: bottom;
 }
 
-.resto1 {
+.resto {
   margin-top: -30px;
 }
-.resto1 h2 {
+.resto h2 {
   font-family: "shrikhand", sans-serif;
   padding: 30px 15px;
   border-radius: 20px 20px 0px 0px;
@@ -287,50 +287,51 @@ footer .footer_lists {
   background: #F6F6F6;
 }
 
-.menus_resto1 {
+.menus_resto {
   padding: 16px;
   background: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 15px;
 }
-.menus_resto1 h3 {
+@media screen and (min-width: 992px) {
+  .menus_resto {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.menus_resto h3 {
   text-transform: uppercase;
   font-weight: 400;
+  position: relative;
 }
-.menus_resto1 h3::after {
+.menus_resto h3::after {
   content: "";
   height: 3px;
   width: 40px;
   background-color: #99E2D0;
   position: absolute;
-  top: 503px;
-  left: 16px;
+  top: 1.5rem;
+  left: 0rem;
 }
-@media screen and (min-width: 992px) {
-  .menus_resto1 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.menus_resto1 .menus_part {
+.menus_resto .menus_part {
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-.menus_resto1 .menus_part .menu_details {
+.menus_resto .menus_part .menu_details {
   display: flex;
   overflow: hidden;
   margin: 6px;
 }
-.menus_resto1 .menus_part .menu_details .menu_details_informations {
+.menus_resto .menus_part .menu_details .menu_details_informations {
   padding: 16px 10px;
   flex: 0 0 90%;
 }
-.menus_resto1 .menus_part .menu_details .menu_details_informations p {
+.menus_resto .menus_part .menu_details .menu_details_informations p {
   font-weight: 300;
   font-size: 15px;
 }
-.menus_resto1 .menus_part .menu_details .price {
+.menus_resto .menus_part .menu_details .price {
   display: flex;
   align-items: flex-end;
   margin-left: auto;
@@ -338,17 +339,17 @@ footer .footer_lists {
   flex: 0 0 18%;
   padding-bottom: 16px;
 }
-.menus_resto1 .menus_part .menu_details .menu_details_hover {
+.menus_resto .menus_part .menu_details .menu_details_hover {
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   flex: 0 0 15%;
   display: grid;
   place-items: center;
 }
-.menus_resto1 .menus_part .menu_details:hover .menu_details_informations {
+.menus_resto .menus_part .menu_details:hover .menu_details_informations {
   flex: 0 0 62%;
 }
-.menus_resto1 .menus_part .menu_details i {
+.menus_resto .menus_part .menu_details i {
   background: #FFFFFF;
   width: 20px;
   border-radius: 50%;
