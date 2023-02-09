@@ -1,3 +1,21 @@
+header::before{
+    display: flex;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    content: "\f060"; 
+    font-weight: 900;
+    color: #353535;
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    font-size: 20px;
+
+}
+
+
 .band img{
     display: block;
     width: 100%;
@@ -87,6 +105,11 @@
                 
             }
 
+            &:hover{
+                cursor: pointer;
+
+           
+
             .menu_details_hover{
                 background: #99E2D0;
                 border-radius: 0px 15px 15px 0px;
@@ -98,19 +121,18 @@
 
             &:hover .menu_details_informations{
                 flex: 0 0 62%;
-               
-
+                               
             }
             
-            i{
-                
+              i{                
                 background: #FFFFFF;
-               
                 width: 20px;
                 border-radius: 50%;
 
-            }
+               }
         }
+
+    }
 
     }
 
