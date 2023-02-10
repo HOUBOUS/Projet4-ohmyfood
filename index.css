@@ -269,7 +269,7 @@ footer .footer_lists {
   }
 }
 
-header::before {
+#pages_restaurants header::before {
   display: flex;
   font-style: normal;
   font-variant: normal;
@@ -284,44 +284,49 @@ header::before {
   top: 50%;
   font-size: 20px;
 }
-
-.band img {
+#pages_restaurants .band img {
   display: block;
   width: 100%;
   height: 300px;
   object-fit: cover;
-  background-position: bottom;
+  background-position: center;
 }
-
-.resto {
+#pages_restaurants .resto {
   margin-top: -30px;
 }
-.resto h2 {
+@media screen and (min-width: 992px) {
+  #pages_restaurants .resto {
+    align-content: center;
+    margin: -40px 193px;
+  }
+}
+#pages_restaurants .resto h2 {
   font-family: "shrikhand", sans-serif;
   padding: 30px 15px;
   border-radius: 20px 20px 0px 0px;
   position: relative;
   background: #F6F6F6;
 }
-
-.menus_resto {
+@media screen and (min-width: 992px) {
+  #pages_restaurants .resto h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+#pages_restaurants .menus_resto {
   padding: 16px;
   background: #F6F6F6;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 15px;
 }
-@media screen and (min-width: 992px) {
-  .menus_resto {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.menus_resto h3 {
+#pages_restaurants .menus_resto h3 {
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
+  margin-bottom: 15px;
 }
-.menus_resto h3::after {
+#pages_restaurants .menus_resto h3::after {
   content: "";
   height: 3px;
   width: 40px;
@@ -330,25 +335,25 @@ header::before {
   top: 1.5rem;
   left: 0rem;
 }
-.menus_resto .menus_part {
+#pages_restaurants .menus_resto .menus_part {
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-.menus_resto .menus_part .menu_details {
+#pages_restaurants .menus_resto .menus_part .menu_details {
   display: flex;
   overflow: hidden;
   margin: 6px;
 }
-.menus_resto .menus_part .menu_details .menu_details_informations {
+#pages_restaurants .menus_resto .menus_part .menu_details .menu_details_informations {
   padding: 16px 10px;
   flex: 0 0 90%;
 }
-.menus_resto .menus_part .menu_details .menu_details_informations p {
+#pages_restaurants .menus_resto .menus_part .menu_details .menu_details_informations p {
   font-weight: 300;
   font-size: 15px;
 }
-.menus_resto .menus_part .menu_details .price {
+#pages_restaurants .menus_resto .menus_part .menu_details .price {
   display: flex;
   align-items: flex-end;
   margin-left: auto;
@@ -356,31 +361,30 @@ header::before {
   flex: 0 0 18%;
   padding-bottom: 16px;
 }
-.menus_resto .menus_part .menu_details:hover {
+#pages_restaurants .menus_resto .menus_part .menu_details:hover {
   cursor: pointer;
 }
-.menus_resto .menus_part .menu_details:hover .menu_details_hover {
+#pages_restaurants .menus_resto .menus_part .menu_details:hover .menu_details_hover {
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   flex: 0 0 15%;
   display: grid;
   place-items: center;
 }
-.menus_resto .menus_part .menu_details:hover:hover .menu_details_informations {
+#pages_restaurants .menus_resto .menus_part .menu_details:hover:hover .menu_details_informations {
   flex: 0 0 62%;
 }
-.menus_resto .menus_part .menu_details:hover i {
+#pages_restaurants .menus_resto .menus_part .menu_details:hover i {
   background: #FFFFFF;
   width: 20px;
   border-radius: 50%;
 }
-
-.command {
+#pages_restaurants .command {
   display: grid;
   justify-items: center;
   justify-content: center;
 }
-.command button {
+#pages_restaurants .command button {
   font-weight: 500;
   font-size: 16px;
   color: #FFFFFF;

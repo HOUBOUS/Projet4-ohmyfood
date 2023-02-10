@@ -1,3 +1,5 @@
+#pages_restaurants {
+
 header::before{
     display: flex;
     font-style: normal;
@@ -21,12 +23,21 @@ header::before{
     width: 100%;
     height: 300px;
     object-fit: cover;
-    background-position: bottom;
+    background-position: center;
     
 }
 
 .resto {
     margin-top: -30px;
+
+    @media screen and (min-width: 992px) {
+        
+        align-content: center;
+        margin: -40px 193px;
+             
+    }
+
+         
     
  h2{
     font-family: "shrikhand", sans-serif;
@@ -34,10 +45,17 @@ header::before{
     border-radius: 20px 20px 0px 0px;
     position: relative;
     background: #F6F6F6;
+
+    @media screen and (min-width: 992px) {
+        display: flex;       
+        justify-content: center;
+        
+             
+    }
  
   }
-
 }
+
 
 .menus_resto
 {
@@ -47,11 +65,10 @@ header::before{
     grid-template-columns: repeat(1, 1fr);
     gap: 15px;
 
-   
-  
+     
 
     @media screen and (min-width: 992px) {
-        grid-template-columns: repeat(3, 1fr);
+       
         
       }
 
@@ -59,6 +76,7 @@ header::before{
         text-transform: uppercase;
         font-weight: 400;
         position: relative;
+        margin-bottom: 15px;
 
        &::after {
         content: "";
@@ -160,4 +178,7 @@ header::before{
     
     
      }
-}
+ }
+
+  }
+
