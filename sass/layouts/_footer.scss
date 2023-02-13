@@ -3,7 +3,8 @@ footer{
     color: #FFFFFF;
     padding: 2rem 2rem;
     
-  
+
+          
     ul{
         list-style: none;
         padding-left: 2rem;
@@ -22,7 +23,13 @@ footer{
         font-weight: 400;
         font-style: italic;
 
-       
+        @media screen and (min-width: 992px) {
+            order: 2;
+            
+            
+          }
+
+              
     }
 
     i{
@@ -35,7 +42,11 @@ footer{
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: flex-end;
             gap: 40px;
+            order: 1;
+            padding-right: 75px;
+            
             
           }
        
