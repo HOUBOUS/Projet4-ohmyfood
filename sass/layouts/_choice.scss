@@ -1,6 +1,18 @@
+@import "./sass/utils/_mixins.scss";
 
 .choice{ 
     padding: 105px 24px;
+    display: flex;
+    flex-direction: column;
+
+    .choice_lists{
+    @media screen and (min-width: 990px) {
+      display: flex;
+      flex-direction: row;       
+        
+      }
+    }
+
     
     & _title{
         padding-left: 20px;
@@ -19,7 +31,14 @@
     background-color: #f6f6f6;
     padding: 28px 30px;
     border-radius: 20px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    @include boxShadow;
+
+    @media screen and (min-width: 990px) {
+        width: 30%;       
+          
+        }
+
     
     &::before{
         counter-increment: compteListe 1; 
@@ -33,11 +52,18 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        left: 53px;
+        left: -11px;
+
+        @media screen and (min-width: 990px) {
+            top: 28px;      
+              
+            }
+    
+        
         
     }
     i.fa-solid{
-        margin-right: 27px;
+        margin-right: 17px;
 
     }
     }
