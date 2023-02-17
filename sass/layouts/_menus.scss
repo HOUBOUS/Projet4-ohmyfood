@@ -112,22 +112,20 @@
             }
 
                 .fas{
+                  color: transparent;
+                    background-image: linear-gradient(to top,rgba(147, 86, 220, 0.9),rgba(255, 121, 218, 0.9)); 
+                    background-clip: text;
+                    -webkit-background-clip: text;
                     opacity: 0;
+                    transition: all 10s ease-in-out;
 
                  }
 
-                 .fas:hover{
-                    color: transparent;
-                    background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1)); 
-                    background-clip: text;
-                    -webkit-background-clip: text;
+                 .fas:hover{                    
                     opacity: 1;
                     cursor: pointer;
-                    transform:scale(1.1);
-                    transition: all 200ms ease-in-out;
-
-                   
-
+                    transform:translateY(-50%) scale(1.3);
+                                    
                 }
                
 
