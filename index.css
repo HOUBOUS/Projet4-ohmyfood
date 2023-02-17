@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
 *,
@@ -204,6 +205,46 @@ main .location p {
   opacity: 0.7;
 }
 
+.loader {
+  margin-top: 70px;
+  display: grid;
+  place-items: start center;
+  position: fixed;
+  background-color: #FFFFFF;
+  height: 200vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: desappear 4s 20s forwards;
+  animation-delay: 20s;
+  transform-origin: top;
+}
+.loader::after {
+  content: "Bienvenue chez OhMyFood!! Votre repas sera prêt! Finis les temps d'attente";
+  height: 400px;
+  width: 400px;
+  padding: 50px;
+  font-size: 30px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid purple;
+  border-radius: 50%;
+  animation: spin 6s ease-in-out;
+  animation-iteration-count: 3;
+}
+
+@keyframes desappear {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .choice {
   padding: 105px 24px;
   display: flex;
@@ -261,6 +302,11 @@ main .location p {
   margin-right: 17px;
 }
 
+.choice_lists :hover {
+  transform: scale(1.02);
+  background-color: #e4d5f6;
+}
+
 footer {
   background-color: #353535;
   color: #FFFFFF;
@@ -304,6 +350,24 @@ footer .footer_lists {
   }
 }
 
+@keyframes quarterSpin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes partAppear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 #pages_restaurants header::before {
   display: flex;
   font-style: normal;
@@ -399,23 +463,17 @@ footer .footer_lists {
   border-radius: 15px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  animation-fill-mode: both;
+  animation: partAppear 1s;
 }
-@keyframes partAppear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+#pages_restaurants .menus_resto .menus_part:nth-child(2) {
+  animation-delay: 200ms;
 }
-#pages_restaurants .menus_resto .menus_part :nth-child(1) {
-  animation-delay: 0.1s;
+#pages_restaurants .menus_resto .menus_part:nth-child(3) {
+  animation-delay: 300ms;
 }
-#pages_restaurants .menus_resto .menus_part :nth-child(2) {
-  animation-delay: 0.2s;
-}
-#pages_restaurants .menus_resto .menus_part :nth-child(3) {
-  animation-delay: 0.3s;
+#pages_restaurants .menus_resto .menus_part:nth-child(4) {
+  animation-delay: 400ms;
 }
 #pages_restaurants .menus_resto .menus_part .menu_details {
   display: flex;
@@ -479,95 +537,6 @@ footer .footer_lists {
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   margin: 40px 0px;
-}
-
-.welcome {
-  width: 100%;
-  height: 100%;
-  background: url("./public/ressources/images/restaurants/Restaurant1.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.welcome h1 {
-  font-size: 100px;
-  margin-bottom: 450px;
-}
-
-.loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.letters {
-  color: rgb(255, 121, 218);
-  font-size: 70px;
-  letter-spacing: 1rem;
-  margin-bottom: 150px;
-  animation: flash 2s linear infinite;
-}
-
-@keyframes flash {
-  0% {
-    color: #db99ea;
-    text-shadow: 0 0 10px #db99ea;
-  }
-  90% {
-    color: #db99ea;
-    text-shadow: none;
-  }
-  100% {
-    color: #db99ea;
-    text-shadow: 0 0 10px #db99ea;
-  }
-}
-.letters:nth-child(1) {
-  animation-delay: 1s;
-}
-
-.letters:nth-child(2) {
-  animation-delay: 2s;
-}
-
-.letters:nth-child(4) {
-  animation-delay: 4s;
-}
-
-.letters:nth-child(5) {
-  animation-delay: 5s;
-}
-
-.letters:nth-child(6) {
-  animation-delay: 6s;
-}
-
-.letters:nth-child(7) {
-  animation-delay: 7s;
-}
-
-.letters:nth-child(8) {
-  animation-delay: 8s;
-}
-
-.letters:nth-child(9) {
-  animation-delay: 9s;
-}
-
-.letters:nth-child(10) {
-  animation-delay: 10s;
-}
-.fonduOut{
-opacity: 0;
-transition: opacity 1s ease-out;
-
 }
 
 /*# sourceMappingURL=index.css.map */

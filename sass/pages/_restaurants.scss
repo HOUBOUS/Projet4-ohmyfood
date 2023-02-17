@@ -1,5 +1,7 @@
-#pages_restaurants {
+@use "../utils/_animations.scss";
 
+#pages_restaurants{
+    
 header::before{
     display: flex;
     font-style: normal;
@@ -118,37 +120,23 @@ header::before{
     }
 
     .menus_part{
+        @for $i from 2 through 4 {
+            &:nth-child(#{$i}){
+                animation-delay: 100ms * $i;
+
+            }
+        }
+        
         background-color: #FFFFFF;
         border-radius: 15px;
         box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
         cursor: pointer;
+        animation-fill-mode: both;
+        animation: partAppear 1s;
 
-        @keyframes partAppear {
-            0% {transform: scale(0)};
-
-            100% {transform: scale(1)};
-        }
-
-       & :nth-child(1){
-        animation-delay: 0.1s;
-
-       }
-
-       & :nth-child(2){
-        animation-delay: 0.2s;
-
-       }
-
-       & :nth-child(3){
-        animation-delay: 0.3s;
-
-       }
        
   
 
-  
-  
-        
 
         .menu_details{
             display: flex;
@@ -245,4 +233,6 @@ header::before{
  }
 
   }
+
+
 
