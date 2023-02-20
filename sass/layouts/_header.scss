@@ -1,5 +1,4 @@
-
-
+@use "../utils/_animations.scss";
 
 header{
     position: relative;
@@ -10,3 +9,52 @@ header{
     padding: 3px;
        
 }
+
+.loader{
+    padding-top: 70px;
+    display: grid;
+    place-items: start center;
+    position: fixed;
+    background-color: #FFFFFF;
+    height: 200vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: desappear 4s 5s forwards;
+    animation-delay: 4s;
+    transform-origin: top;
+    &::after{
+      content: "Bienvenue chez OhMyFood!! Votre repas sera prêt! Finis les temps d'attente";
+      height: 400px;
+      width: 400px;
+      padding: 50px;
+      font-size: 30px;
+      border-right: 5px solid transparent;
+      border-top: 5px solid purple;
+      border-radius: 50%;
+      animation: spin 3s ease-in-out;
+      animation-iteration-count: 2;
+
+    }
+     
+  }
+
+  @keyframes desappear{
+   0%{
+       transform: scale(0.8);
+
+    }
+
+    100%{
+      transform: scale(0);
+    }
+  }
+
+  @keyframes spin{
+    to
+    {
+      transform: rotate(360deg);
+
+    }
+
+  }

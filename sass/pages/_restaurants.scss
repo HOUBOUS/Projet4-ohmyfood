@@ -34,15 +34,11 @@ header::before{
     margin-top: -30px;
 
     @media screen and (min-width: 992px) {
-        
         align-content: center;
         margin: -40px 193px 0px 193px;
-       
-        
+               
     }
-
-         
-    
+        
  h2{
     font-family: "shrikhand", sans-serif;
     padding: 30px 15px;
@@ -66,27 +62,74 @@ header::before{
 
      }
    
-        .fas{
-            opacity: 0;
-         
-        }
+     .heart{
+        width: 20px;
+        height: 20px;
 
-        .fas:hover{
-            color: transparent;
-            background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1)); 
+       
+      }
+
+      .fill,
+      .heart .fill{
+        cursor: pointer;
+        animation: reverse-color 200ms;
+        color: black;
+        -webkit-text-fill-color: black;
+
+        
+       }
+      
+      .heart .fill:hover{
+        display: inline-block;
+        color:#000;
+        background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1)); ;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        animation:fill 2s ease-in-out;
+
+      }
+
+    @keyframes reverse-color {
+        from{
+            opacity: 1;
+            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
             background-clip: text;
             -webkit-background-clip: text;
-            opacity: 1;
-            cursor: pointer;   
-            animation: fill 2s ease-in-out;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+
+        }   
+
+        to{
+            opacity: 0.8;
+            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
 
         }
+        
+    }
+
+    @keyframes fill {
+        0%{
+            opacity: 0;
+        }
+
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
    
-    
  
   }
 }
-
 
 .menus_resto{
     padding: 16px;
@@ -136,9 +179,6 @@ header::before{
         animation: partAppear 1s;
 
        
-  
-
-
         .menu_details{
             display: flex;
             overflow: hidden;    
@@ -168,13 +208,14 @@ header::before{
                 
             }
 
-            &:hover{
-                cursor: pointer;
+           &:hover{
+            cursor: pointer;
                                  
             & .menu_details_informations{
                 flex: 0 0 62%;
                                                
             }
+        }
         }
 
         .menu_details_hover{
@@ -218,8 +259,7 @@ header::before{
     justify-content: center;
 
 
-   button{
-    
+   button{    
     font-weight: 500;
     font-size: 16px;
     color: #FFFFFF;
@@ -230,18 +270,17 @@ header::before{
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     margin: 40px 0px;
     
-   
     
 
-    button :active{
+    button:hover{
         cursor: pointer;
-        border: 10px solid red;
+        
         
     }
     }
  }
 
-  }
+  
 
 
 

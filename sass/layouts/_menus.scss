@@ -47,9 +47,10 @@
    
            .card{
               height: 251px;
-              flex-grow: 1;
               background: #FFFFFF;
               border-radius: 15px;
+              flex-grow: 1;
+             
               
               & .card_img1{
                 background-image: url("./public/ressources/images/restaurants/Restaurant1.jpg");
@@ -94,43 +95,56 @@
                 h3,p{
                     margin: 0;
                 padding-top: 0.5rem;
-            }
+                }
 
                 p{
                     font-weight: 300;
                     font-size: 17px;
                     
-
                 }
 
                 i{
                     font-size: 2rem;
                     position: absolute;
                     right: 1.5rem;
-                    top: 1rem;
+                    top: 0.5rem;
                 }
-            }
+              }
 
-                .fas{
-                  color: transparent;
-                    background-image: linear-gradient(to top,rgba(147, 86, 220, 0.9),rgba(255, 121, 218, 0.9)); 
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    opacity: 0;
-                    transition: all 10s ease-in-out;
+              .heart{
+                width: 20px;
+                height: 20px;
 
-                 }
-
-                 .fas:hover{                    
-                    opacity: 1;
-                    cursor: pointer;
-                    transform:translateY(-50%) scale(1.3);
-                                    
-                }
                
+              }
 
+              .fill,
+              .heart .fill{
+                cursor: pointer;
+                animation: reverse-color 200ms;
+                color: black;
+                -webkit-text-fill-color: black;
+
+                
+               }
+              
+              .heart .fill:hover{
+                display: inline-block;
+                color:#000;
+                background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1)); ;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+                animation:fill 2s ease-in-out;
+
+              }
+
+              }
+
+                
             }
         
       
-    }
+    
 

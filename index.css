@@ -44,6 +44,16 @@ a {
   color: inherit;
 }
 
+@keyframes partAppear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 header {
   position: relative;
   margin: Opx;
@@ -53,6 +63,46 @@ header {
   padding: 3px;
 }
 
+.loader {
+  padding-top: 70px;
+  display: grid;
+  place-items: start center;
+  position: fixed;
+  background-color: #FFFFFF;
+  height: 200vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: desappear 4s 5s forwards;
+  animation-delay: 4s;
+  transform-origin: top;
+}
+.loader::after {
+  content: "Bienvenue chez OhMyFood!! Votre repas sera prêt! Finis les temps d'attente";
+  height: 400px;
+  width: 400px;
+  padding: 50px;
+  font-size: 30px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid purple;
+  border-radius: 50%;
+  animation: spin 3s ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes desappear {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 main {
   font-family: "Roboto", sans-serif;
 }
@@ -111,9 +161,9 @@ main .location p {
 }
 .menus .card {
   height: 251px;
-  flex-grow: 1;
   background: #FFFFFF;
   border-radius: 15px;
+  flex-grow: 1;
 }
 .menus .card .card_img1 {
   background-image: url("./public/ressources/images/restaurants/Restaurant1.jpg");
@@ -159,20 +209,28 @@ main .location p {
   font-size: 2rem;
   position: absolute;
   right: 1.5rem;
-  top: 1rem;
+  top: 0.5rem;
 }
-.menus .card .fas {
-  color: transparent;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+.menus .card .heart {
+  width: 20px;
+  height: 20px;
+}
+.menus .card .fill,
+.menus .card .heart .fill {
+  cursor: pointer;
+  animation: reverse-color 200ms;
+  color: black;
+  -webkit-text-fill-color: black;
+}
+.menus .card .heart .fill:hover {
+  display: inline-block;
+  color: #000;
+  background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 10s ease-in-out;
-}
-.menus .card .fas:hover {
-  opacity: 1;
-  cursor: pointer;
-  transform: translateY(-50%) scale(1.3);
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  animation: fill 2s ease-in-out;
 }
 
 .explorer {
@@ -205,46 +263,6 @@ main .location p {
   opacity: 0.7;
 }
 
-.loader {
-  margin-top: 70px;
-  display: grid;
-  place-items: start center;
-  position: fixed;
-  background-color: #FFFFFF;
-  height: 200vh;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: desappear 4s 5s forwards;
-  animation-delay: 9s;
-  transform-origin: top;
-}
-.loader::after {
-  content: "Bienvenue chez OhMyFood!! Votre repas sera prêt! Finis les temps d'attente";
-  height: 400px;
-  width: 400px;
-  padding: 50px;
-  font-size: 30px;
-  border-right: 5px solid transparent;
-  border-top: 5px solid purple;
-  border-radius: 50%;
-  animation: spin 6s ease-in-out;
-  animation-iteration-count: 3;
-}
-
-@keyframes desappear {
-  0% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .choice {
   padding: 105px 24px;
   display: flex;
@@ -350,24 +368,6 @@ footer .footer_lists {
   }
 }
 
-@keyframes quarterSpin {
-  0% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes partAppear {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 #pages_restaurants header::before {
   display: flex;
   font-style: normal;
@@ -419,17 +419,55 @@ footer .footer_lists {
   right: 2rem;
   top: 2rem;
 }
-#pages_restaurants .resto h2 .fas {
-  opacity: 0;
+#pages_restaurants .resto h2 .heart {
+  width: 20px;
+  height: 20px;
 }
-#pages_restaurants .resto h2 .fas:hover {
-  color: transparent;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+#pages_restaurants .resto h2 .fill,
+#pages_restaurants .resto h2 .heart .fill {
+  cursor: pointer;
+  animation: reverse-color 200ms;
+  color: black;
+  -webkit-text-fill-color: black;
+}
+#pages_restaurants .resto h2 .heart .fill:hover {
+  display: inline-block;
+  color: #000;
+  background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 1;
-  cursor: pointer;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
   animation: fill 2s ease-in-out;
+}
+@keyframes reverse-color {
+  from {
+    opacity: 1;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
+  to {
+    opacity: 0.8;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #pages_restaurants .menus_resto {
   padding: 16px;
@@ -503,7 +541,7 @@ footer .footer_lists {
 #pages_restaurants .menus_resto .menus_part .menu_details:hover .menu_details_informations {
   flex: 0 0 62%;
 }
-#pages_restaurants .menus_resto .menus_part .menu_details .menu_details_hover {
+#pages_restaurants .menus_resto .menus_part .menu_details_hover {
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   flex: 0 0 15%;
@@ -511,7 +549,7 @@ footer .footer_lists {
   align-items: center;
   justify-content: center;
 }
-#pages_restaurants .menus_resto .menus_part .menu_details i {
+#pages_restaurants .menus_resto .menus_part i {
   background: #FFFFFF;
   width: 20px;
   height: 20px;
@@ -522,12 +560,13 @@ footer .footer_lists {
   color: #99E2D0;
   transition: transform 0.5s;
 }
-#pages_restaurants .command {
+
+.command {
   display: grid;
   justify-items: center;
   justify-content: center;
 }
-#pages_restaurants .command button {
+.command button {
   font-weight: 500;
   font-size: 16px;
   color: #FFFFFF;
@@ -538,9 +577,8 @@ footer .footer_lists {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   margin: 40px 0px;
 }
-#pages_restaurants .command button button :active {
+.command button button:hover {
   cursor: pointer;
-  border: 10px solid red;
 }
 
 /*# sourceMappingURL=index.css.map */
