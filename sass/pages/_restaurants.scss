@@ -16,7 +16,7 @@ header::before{
     left: 23px;
     top: 50%;
     font-size: 20px;
-    transition: transform 200ms;
+    
 
 }
 
@@ -140,8 +140,8 @@ header::before{
     
 
     @media screen and (min-width: 992px) {
-        padding: 16px 211px;
-        
+        padding: 16px 135px;
+        min-width: 370px;
       }
 
     h3{
@@ -186,7 +186,7 @@ header::before{
             
                          
            .menu_details_informations{
-            padding: 16px 10px;
+            padding: 16px 5px;
             flex: 0 0 90%;
             transition: flex-basis 2s linear;
             
@@ -212,7 +212,7 @@ header::before{
             cursor: pointer;
                                  
             & .menu_details_informations{
-                flex: 0 0 62%;
+                flex: 0 0 60%;
                                                
             }
         }
@@ -221,7 +221,7 @@ header::before{
         .menu_details_hover{
             background: #99E2D0;
             border-radius: 0px 15px 15px 0px;
-            flex: 0 0 15%;
+            flex: 0 0 13%;
             display: flex;
             align-items: center;
             justify-content: center;

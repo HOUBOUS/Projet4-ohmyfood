@@ -1,4 +1,6 @@
 @use "../utils/_animations.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
 
 header{
     position: relative;
@@ -39,6 +41,9 @@ header{
 
     & h2{
         color: #FFFFFF;
+        font-family: "Roboto", sans-serif;
+        font-size: 35px;
+
     }
      
   }

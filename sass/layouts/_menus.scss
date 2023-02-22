@@ -1,25 +1,29 @@
 
 .menus{
-    height: 77rem;
+    height: 1400px;
+    width: 100%;
     background: #D2D2D2;
     font-family: "Roboto", sans-serif;
     padding: 0 20px 0 20px;
 
     @media screen and (min-width: 992px) {
-        height: 430px;
+        height: 440px;
+        padding: 40px 100px;
         
       }
-
    
     .menus_restaurants{
         
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        width: 100%;
         gap: 26px;
+        height: 1250px;
         min-width: 20rem;
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: 1070px) {
         flex-direction: row;
+        height: 440px;
         
       }
 
@@ -33,7 +37,7 @@
                    content: "nouveau";
                    position: absolute;
                    height: 29px;
-                   width: 80px;
+                   width: 18%;
                    display: flex;
                    align-items: center;
                    justify-content: center;
@@ -42,15 +46,24 @@
                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
                    right: 1rem;
                    top: 1rem;
+
+                   @media screen and (min-width: 992px) {
+                    width: 20%;
+                    
+                  }
             }
         }
    
            .card{
               height: 251px;
+              width: 100%;
               background: #FFFFFF;
               border-radius: 15px;
                flex-grow: 1;
-             
+               @media screen and (min-width: 1070px) {
+                width: 23%;
+                
+              }
               
               & .card_img1{
                 background-image: url("./public/ressources/images/restaurants/Restaurant1.jpg");

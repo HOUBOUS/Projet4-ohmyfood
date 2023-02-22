@@ -1,8 +1,15 @@
+@use "../utils/variables"
 
 .choice{ 
     padding: 105px 24px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+        
+        padding: 105px 50px;
+        
+      }
     
     .choice_lists{
     @media screen and (min-width: 990px) {
@@ -64,8 +71,14 @@
         
         
     }
+
     i.fa-solid{
         margin-right: 17px;
+
+    }
+
+    i.fa-store{
+        color: variables.$purple;
 
     }
     }
