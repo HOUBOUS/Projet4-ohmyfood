@@ -31,6 +31,7 @@ header::before{
     
 }
 
+
 .resto {
     margin-top: -30px;
 
@@ -48,89 +49,37 @@ header::before{
     background: #F6F6F6;
    
 
-    @media screen and (min-width: 992px) {
-        display: flex;       
-        justify-content: center;
-        
-             
-    }
-
-     i{
-        font-size: 2rem;
-        position: absolute;
-        right: 2rem;
-        top: 2rem;
-
-     }
-   
-     .heart{
-                width: 20px;
-                height: 20px;
-
-               
-              }
-
-              .fill,
-              .heart .fill{
-                cursor: pointer;
-                animation: reverse-color 200ms;
-                color: black;
-                -webkit-text-fill-color: black;
-
-                
-               }
-              
-              .heart .fill:hover{
-                display: inline-block;
-                color:#000;
-                background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1)); ;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: 900;
-                animation:fill 2s ease-in-out;
-
-              }
-
-    @keyframes reverse-color {
-        from{
-            opacity: 1;
-            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-
-        }   
-
-        to{
-            opacity: 0.8;
-            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-
-        }
-        
-    }
-
-    @keyframes fill {
-        0%{
-            opacity: 0;
+        @media screen and (min-width: 992px) {
+            display: flex;       
+            justify-content: center;
+           
         }
 
-        50%{
-            opacity: 0.5;
-        }
-        100%{
-            opacity: 1;
-        }
-    }
-   
- 
+        i{
+          font-size: 2rem;
+          position: absolute;
+          right: 2rem;
+          top: 2rem;
+
+        }        
   }
 }
+
+  
+.fill{                
+    animation: reverse-color 2s;
+    
+   }
+  
+  .fill:hover{
+    cursor: pointer;
+    color: transparent;
+    background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
+    background-clip: text;
+    font-weight: 900;
+    animation:fill 3s ease-in-out;
+
+  }
 
 .menus_resto{
     padding: 16px;
@@ -311,7 +260,7 @@ header::before{
     }
 
     }
-    
+
  }
 
   

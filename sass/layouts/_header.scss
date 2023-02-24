@@ -18,13 +18,14 @@ header{
     place-items: start center;
     position: fixed;
     background-color: black;
-    height: 900px;
+    height: 100vh;
     inset: 0;
     z-index: 1;
     opacity: 1;
     animation: desappear 4s 5s forwards;
     animation-delay: 4s;
     transform-origin: top;
+    
     &::after{
       content: "";
       height: 400px;
@@ -40,9 +41,10 @@ header{
     }
 
     & h2{
-        color: #FFFFFF;
+        color: white;
         font-family: "Roboto", sans-serif;
         font-size: 35px;
+        position: absolute;
 
     }
      

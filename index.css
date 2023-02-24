@@ -60,6 +60,51 @@ a {
     opacity: 1;
   }
 }
+@keyframes reverse-color {
+  0% {
+    opacity: 1;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+  }
+  20% {
+    opacity: 0.8;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+  }
+  50% {
+    opacity: 0.7;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+  }
+  100% {
+    opacity: 0.2;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   position: relative;
   margin: Opx;
@@ -75,7 +120,7 @@ header {
   place-items: start center;
   position: fixed;
   background-color: black;
-  height: 900px;
+  height: 100vh;
   inset: 0;
   z-index: 1;
   opacity: 1;
@@ -96,9 +141,10 @@ header {
   animation-iteration-count: 2;
 }
 .loader h2 {
-  color: #FFFFFF;
+  color: white;
   font-family: "Roboto", sans-serif;
   font-size: 35px;
+  position: absolute;
 }
 
 @keyframes desappear {
@@ -131,13 +177,12 @@ main .location p {
 }
 
 .menus {
-  height: 1400px;
   width: 100%;
   background: #D2D2D2;
   font-family: "Roboto", sans-serif;
-  padding: 0 20px 0 20px;
+  padding: 0 30px 0 30px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1000px) {
   .menus {
     height: 440px;
     padding: 40px 100px;
@@ -149,13 +194,11 @@ main .location p {
   flex-direction: column;
   width: 100%;
   gap: 26px;
-  height: 1250px;
   min-width: 20rem;
 }
-@media screen and (min-width: 1070px) {
+@media screen and (min-width: 1024px) {
   .menus .menus_restaurants {
     flex-direction: row;
-    height: 440px;
   }
 }
 .menus .menus_restaurants .newIcon {
@@ -165,7 +208,7 @@ main .location p {
   content: "nouveau";
   position: absolute;
   height: 29px;
-  width: 18%;
+  width: 23%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,11 +218,6 @@ main .location p {
   right: 1rem;
   top: 1rem;
 }
-@media screen and (min-width: 992px) {
-  .menus .menus_restaurants .newIcon::before {
-    width: 20%;
-  }
-}
 .menus .card {
   height: 251px;
   width: 100%;
@@ -187,9 +225,9 @@ main .location p {
   border-radius: 15px;
   flex-grow: 1;
 }
-@media screen and (min-width: 1070px) {
+@media screen and (min-width: 1024px) {
   .menus .card {
-    width: 23%;
+    width: 22%;
   }
 }
 .menus .card .card_img1 {
@@ -221,7 +259,7 @@ main .location p {
   border-radius: 15px 15px 0 0;
 }
 .menus .card .card_text {
-  margin: 0.5rem;
+  margin: 8px;
   position: relative;
 }
 .menus .card .card_text h3, .menus .card .card_text p {
@@ -238,26 +276,16 @@ main .location p {
   right: 1.5rem;
   top: 0.5rem;
 }
-.menus .card .heart {
-  width: 20px;
-  height: 20px;
+.menus .card .fill {
+  animation: reverse-color 2s;
 }
-.menus .card .fill,
-.menus .card .heart .fill {
+.menus .card .fill:hover {
   cursor: pointer;
-  animation: reverse-color 200ms;
-  color: black;
-  -webkit-text-fill-color: black;
-}
-.menus .card .heart .fill:hover {
-  display: inline-block;
-  color: #000;
+  color: transparent;
   background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 900;
-  animation: fill 2s ease-in-out;
+  animation: fill 3s ease-in-out;
 }
 
 .explorer {
@@ -323,6 +351,7 @@ main .location p {
   border-radius: 20px;
   position: relative;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2470588235);
+  white-space: nowrap;
 }
 @media screen and (min-width: 990px) {
   .choice ol li {
@@ -453,55 +482,16 @@ footer .footer_lists {
   right: 2rem;
   top: 2rem;
 }
-#pages_restaurants .resto h2 .heart {
-  width: 20px;
-  height: 20px;
+#pages_restaurants .fill {
+  animation: reverse-color 2s;
 }
-#pages_restaurants .resto h2 .fill,
-#pages_restaurants .resto h2 .heart .fill {
+#pages_restaurants .fill:hover {
   cursor: pointer;
-  animation: reverse-color 200ms;
-  color: black;
-  -webkit-text-fill-color: black;
-}
-#pages_restaurants .resto h2 .heart .fill:hover {
-  display: inline-block;
-  color: #000;
+  color: transparent;
   background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 900;
-  animation: fill 2s ease-in-out;
-}
-@keyframes reverse-color {
-  from {
-    opacity: 1;
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-  }
-  to {
-    opacity: 0.8;
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-  }
-}
-@keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fill 3s ease-in-out;
 }
 #pages_restaurants .menus_resto {
   padding: 16px;

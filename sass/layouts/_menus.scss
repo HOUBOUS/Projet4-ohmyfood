@@ -1,12 +1,13 @@
+@use "../utils/_animations.scss";
+@use "../utils/_variables.scss";
 
 .menus{
-    height: 1400px;
     width: 100%;
     background: #D2D2D2;
     font-family: "Roboto", sans-serif;
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 30px;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1000px) {
         height: 440px;
         padding: 40px 100px;
         
@@ -19,11 +20,10 @@
         flex-direction: column;
         width: 100%;
         gap: 26px;
-        height: 1250px;
         min-width: 20rem;
-      @media screen and (min-width: 1070px) {
+      @media screen and (min-width: 1024px) {
         flex-direction: row;
-        height: 440px;
+        
         
       }
 
@@ -37,20 +37,17 @@
                    content: "nouveau";
                    position: absolute;
                    height: 29px;
-                   width: 18%;
+                   width: 23%;
                    display: flex;
                    align-items: center;
                    justify-content: center;
-                   color: #008766;
+                   color: variables.$green;
                    background: #99E2D0;
                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
                    right: 1rem;
                    top: 1rem;
 
-                   @media screen and (min-width: 992px) {
-                    width: 20%;
-                    
-                  }
+                   
             }
         }
    
@@ -60,8 +57,8 @@
               background: #FFFFFF;
               border-radius: 15px;
                flex-grow: 1;
-               @media screen and (min-width: 1070px) {
-                width: 23%;
+               @media screen and (min-width: 1024px) {
+                width: 22%;
                 
               }
               
@@ -102,12 +99,13 @@
               }
 
               & .card_text{
-                margin: 0.5rem;
+                margin: 8px;
                 position: relative;
 
                 h3,p{
-                    margin: 0;
-                padding-top: 0.5rem;
+                  margin: 0;
+                  padding-top: 0.5rem;
+
                 }
 
                 p{
@@ -123,33 +121,20 @@
                     top: 0.5rem;
                 }
               }
+             
 
-              .heart{
-                width: 20px;
-                height: 20px;
-
-               
-              }
-
-              .fill,
-              .heart .fill{
-                cursor: pointer;
-                animation: reverse-color 200ms;
-                color: black;
-                -webkit-text-fill-color: black;
-
+              .fill{                
+                animation: reverse-color 2s;
                 
                }
               
-              .heart .fill:hover{
-                display: inline-block;
-                color:#000;
-                background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1)); ;
+              .fill:hover{
+                cursor: pointer;
+                color: transparent;
+                background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
                 background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
                 font-weight: 900;
-                animation:fill 2s ease-in-out;
+                animation:fill 3s ease-in-out;
 
               }
 
