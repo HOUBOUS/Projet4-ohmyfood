@@ -1,5 +1,5 @@
 @use "../utils/_animations.scss";
-@use "../utils/_variables";
+@use "../utils/_variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
 
@@ -12,44 +12,72 @@ header{
     padding: 3px;
        
 }
-
 .loader{
-    padding-top: 50px;
-    display: grid;
-    place-items: start center;
-    position: fixed;
-    background-color: black;
-    height: 100vh;
-    inset: 0;
-    z-index: 1;
-    opacity: 1;
-    animation: desappear 4s 5s forwards;
-    animation-delay: 4s;
-    transform-origin: top;
-    
-    &::after{
+  padding-top: 50px;
+  display: grid;
+  place-items: start center;
+  position: fixed;
+  background-color: black;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 1;
+  animation: desappear 5s 6s forwards;
+  animation-delay: 4s;
+  transform-origin: top;
+
+
+   &::after{
       content: "";
       height: 400px;
       width: 400px;
       padding: 30px;
       font-size: 30px;
       border-right: 5px solid transparent;
-      border-top: 5px solid #9356DC;
+      border-top: 5px solid variables.$purple;
       border-radius: 50%;
-      animation: spin 3s ease-in-out;
+      animation: spin 5s ease-in-out;
       animation-iteration-count: 2;
+    
 
     }
 
-    & h2{
-        color: white;
-        font-family: "Roboto", sans-serif;
-        font-size: 35px;
-        position: absolute;
-
+    & h2, h3, p{
+      font-family: "Roboto", sans-serif;
+      font-size: 35px;
+      align-content: center;
+      background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));;
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;      
+      position: absolute;
+      line-height: 60px;
+      
     }
-     
+
+    & p{
+      padding: 100px;
+    }
+
+   .ustensil{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    justify-content: center;
+    height: 100px;
+    padding-top: 150px;
+
+   }
+
+   & i{
+    display: grid;
+    justify-content: center;
+    font-size: 39px;
+    padding: 150px;
+    color: variables.$pink;
+
   }
+     
+} 
 
   @keyframes desappear{
    0%{

@@ -124,7 +124,7 @@ header {
   inset: 0;
   z-index: 1;
   opacity: 1;
-  animation: desappear 4s 5s forwards;
+  animation: desappear 5s 6s forwards;
   animation-delay: 4s;
   transform-origin: top;
 }
@@ -137,14 +137,36 @@ header {
   border-right: 5px solid transparent;
   border-top: 5px solid #9356DC;
   border-radius: 50%;
-  animation: spin 3s ease-in-out;
+  animation: spin 5s ease-in-out;
   animation-iteration-count: 2;
 }
-.loader h2 {
-  color: white;
+.loader h2, .loader h3, .loader p {
   font-family: "Roboto", sans-serif;
   font-size: 35px;
+  align-content: center;
+  background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
+  line-height: 60px;
+}
+.loader p {
+  padding: 100px;
+}
+.loader .ustensil {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  justify-content: center;
+  height: 100px;
+  padding-top: 150px;
+}
+.loader i {
+  display: grid;
+  justify-content: center;
+  font-size: 39px;
+  padding: 150px;
+  color: #FF79DA;
 }
 
 @keyframes desappear {
