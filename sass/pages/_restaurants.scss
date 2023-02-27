@@ -35,7 +35,7 @@ header::before{
 .resto {
     margin-top: -30px;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: variables.$break-point) {
         align-content: center;
         margin: -40px 193px 0px 193px;
                
@@ -49,7 +49,7 @@ header::before{
     background: #F6F6F6;
    
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: variables.$break-point) {
             display: flex;       
             justify-content: center;
            
@@ -58,9 +58,9 @@ header::before{
         i{
           font-size: 2rem;
           position: absolute;
-          right: 2rem;
+          right: 1.5rem;
           top: 2rem;
-
+          
         }        
   }
 }
@@ -89,8 +89,8 @@ header::before{
     gap: 15px;
     
 
-    @media screen and (min-width: 992px) {
-        padding: 16px 211px;
+    @media screen and (min-width: variables.$break-point) {
+        padding: 16px 170px;
         
       }
 
@@ -129,19 +129,20 @@ header::before{
         animation-fill-mode: both;
         animation: partAppear 1s;
         overflow: hidden; 
-             
+                   
        
         .menu_details{
             display: flex;
-            margin: 6px; 
+            margin: 4px; 
             white-space: nowrap;
             overflow: hidden; 
+           
             
             
                          
            .menu_details_informations{
                 padding: 16px 10px;
-                flex: 0 0 90%;
+                flex: 0 0 80%;
                 transition: flex-basis 2s linear;
                 overflow: hidden;  
 
@@ -166,10 +167,13 @@ header::before{
             .price{
                 display: flex;
                 align-items: flex-end;
+                justify-content: flex-end;
                 margin-left: auto;
                 font-weight: bold;
-                flex: 0 0 10%;
+                flex: 0 0 20%;
                 padding-bottom: 16px;
+                padding-right: 10px;
+                
                 
             }
 
@@ -193,7 +197,7 @@ header::before{
                     }
 
                      & .fa-check{
-                        animation: checkSpin 1s ease-in-out;
+                        animation: checkSpin 2s ease-in-out;
 
                     }
                          @keyframes checkSpin {

@@ -5,14 +5,14 @@
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: variables.$break-point) {
         
         padding: 105px 50px;
         
       }
     
     .choice_lists{
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: variables.$break-point) {
       display: flex;
       flex-direction: row;       
         
@@ -42,7 +42,7 @@
     white-space: nowrap;
 
     
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: variables.$break-point) {
         width: 30%;       
           
         }
@@ -62,15 +62,11 @@
         position: absolute;
         left: -11px;
 
-        
-
-        @media screen and (min-width: 990px) {
+        @media screen and (min-width: variables.$break-point) {
             top: 28px;      
               
             }
-    
-        
-        
+            
     }
 
     i.fa-solid{
@@ -78,7 +74,7 @@
 
     }
 
-    i.fa-store{
+    i.fa-solid:hover{
         color: variables.$purple;
 
     }
@@ -89,6 +85,5 @@
 
 .choice_lists :hover{
     transform: scale(1.02);
-    background-color:lighten(#9356DC, 30%);
-    
+        
 }

@@ -182,10 +182,9 @@ main .location p {
   font-family: "Roboto", sans-serif;
   padding: 0 30px 0 30px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .menus {
-    height: 440px;
-    padding: 40px 100px;
+    padding: 20px 50px;
   }
 }
 .menus .menus_restaurants {
@@ -193,8 +192,9 @@ main .location p {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  gap: 26px;
+  gap: 20px;
   min-width: 20rem;
+  padding-bottom: 80px;
 }
 @media screen and (min-width: 1024px) {
   .menus .menus_restaurants {
@@ -219,42 +219,40 @@ main .location p {
   top: 1rem;
 }
 .menus .card {
-  height: 251px;
-  width: 100%;
   background: #FFFFFF;
   border-radius: 15px;
   flex-grow: 1;
 }
 @media screen and (min-width: 1024px) {
   .menus .card {
-    width: 22%;
+    width: 23%;
   }
 }
 .menus .card .card_img1 {
   background-image: url("./public/ressources/images/restaurants/Restaurant1.jpg");
   background-size: cover;
-  height: 70%;
+  height: 10rem;
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
 .menus .card .card_img2 {
   background-image: url("./public/ressources/images/restaurants/Restaurant2.jpg");
   background-size: cover;
-  height: 70%;
+  height: 10rem;
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
 .menus .card .card_img3 {
   background-image: url("./public/ressources/images/restaurants/Restaurant3.jpg");
   background-size: cover;
-  height: 70%;
+  height: 10rem;
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
 .menus .card .card_img4 {
   background-image: url("./public/ressources/images/restaurants/Restaurant4.jpg");
   background-size: cover;
-  height: 70%;
+  height: 10rem;
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
@@ -271,19 +269,25 @@ main .location p {
   font-size: 17px;
 }
 .menus .card .card_text i {
-  font-size: 2rem;
+  font-size: 30px;
   position: absolute;
-  right: 1.5rem;
-  top: 0.5rem;
+  right: 7px;
+  top: 6px;
 }
-.menus .card .fill {
-  animation: reverse-color 2s;
-}
-.menus .card .fill:hover {
+.menus .card .fill,
+.menus .card .heart .fill {
   cursor: pointer;
-  color: transparent;
+  animation: reverse-color 0.5s;
+  color: black;
+  -webkit-text-fill-color: black;
+}
+.menus .card .heart.fill:hover {
+  cursor: pointer;
+  color: black;
   background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
   animation: fill 3s ease-in-out;
 }
@@ -323,12 +327,12 @@ main .location p {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .choice {
     padding: 105px 50px;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .choice .choice_lists {
     display: flex;
     flex-direction: row;
@@ -353,7 +357,7 @@ main .location p {
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2470588235);
   white-space: nowrap;
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .choice ol li {
     width: 30%;
   }
@@ -372,7 +376,7 @@ main .location p {
   position: absolute;
   left: -11px;
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .choice ol li::before {
     top: 28px;
   }
@@ -380,13 +384,12 @@ main .location p {
 .choice ol li i.fa-solid {
   margin-right: 17px;
 }
-.choice ol li i.fa-store {
+.choice ol li i.fa-solid:hover {
   color: #9356DC;
 }
 
 .choice_lists :hover {
   transform: scale(1.02);
-  background-color: #e4d5f6;
 }
 
 footer {
@@ -409,7 +412,7 @@ footer .footer_logo {
   font-weight: 400;
   font-style: italic;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   footer .footer_logo {
     order: 2;
   }
@@ -420,7 +423,7 @@ footer i {
 footer .footer_lists {
   padding: 1rem 0rem;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   footer .footer_lists {
     display: flex;
     flex-direction: row;
@@ -457,7 +460,7 @@ footer .footer_lists {
 #pages_restaurants .resto {
   margin-top: -30px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   #pages_restaurants .resto {
     align-content: center;
     margin: -40px 193px 0px 193px;
@@ -470,7 +473,7 @@ footer .footer_lists {
   position: relative;
   background: #F6F6F6;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   #pages_restaurants .resto h2 {
     display: flex;
     justify-content: center;
@@ -479,7 +482,7 @@ footer .footer_lists {
 #pages_restaurants .resto h2 i {
   font-size: 2rem;
   position: absolute;
-  right: 2rem;
+  right: 1.5rem;
   top: 2rem;
 }
 #pages_restaurants .fill {
@@ -500,9 +503,9 @@ footer .footer_lists {
   grid-template-columns: repeat(1, 1fr);
   gap: 15px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   #pages_restaurants .menus_resto {
-    padding: 16px 211px;
+    padding: 16px 170px;
   }
 }
 #pages_restaurants .menus_resto h3 {
@@ -540,13 +543,13 @@ footer .footer_lists {
 }
 #pages_restaurants .menus_resto .menus_part .menu_details {
   display: flex;
-  margin: 6px;
+  margin: 4px;
   white-space: nowrap;
   overflow: hidden;
 }
 #pages_restaurants .menus_resto .menus_part .menu_details .menu_details_informations {
   padding: 16px 10px;
-  flex: 0 0 90%;
+  flex: 0 0 80%;
   transition: flex-basis 2s linear;
   overflow: hidden;
 }
@@ -565,10 +568,12 @@ footer .footer_lists {
 #pages_restaurants .menus_resto .menus_part .menu_details .price {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   margin-left: auto;
   font-weight: bold;
-  flex: 0 0 10%;
+  flex: 0 0 20%;
   padding-bottom: 16px;
+  padding-right: 10px;
 }
 #pages_restaurants .menus_resto .menus_part .menu_details .menu_details_hover {
   background: #99E2D0;
@@ -585,7 +590,7 @@ footer .footer_lists {
   flex: 0 0 62%;
 }
 #pages_restaurants .menus_resto .menus_part .menu_details:hover .fa-check {
-  animation: checkSpin 1s ease-in-out;
+  animation: checkSpin 2s ease-in-out;
 }
 @keyframes checkSpin {
   0% {

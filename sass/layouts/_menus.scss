@@ -7,21 +7,20 @@
     font-family: "Roboto", sans-serif;
     padding: 0 30px 0 30px;
 
-    @media screen and (min-width: 1000px) {
-        height: 440px;
-        padding: 40px 100px;
+    @media screen and (min-width: variables.$break-point) {
+        padding: 20px 50px;
         
       }
    
-    .menus_restaurants{
-        
+    .menus_restaurants{        
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         width: 100%;
-        gap: 26px;
+        gap: 20px;
         min-width: 20rem;
-      @media screen and (min-width: 1024px) {
+        padding-bottom: 80px;
+      @media screen and (min-width: variables.$break-point) {
         flex-direction: row;
         
         
@@ -51,21 +50,19 @@
             }
         }
    
-           .card{
-              height: 251px;
-              width: 100%;
+           .card{            
               background: #FFFFFF;
               border-radius: 15px;
                flex-grow: 1;
-               @media screen and (min-width: 1024px) {
-                width: 22%;
+               @media screen and (min-width: variables.$break-point) {
+                width: 23%;
                 
               }
               
               & .card_img1{
                 background-image: url("./public/ressources/images/restaurants/Restaurant1.jpg");
                 background-size: cover;
-                height: 70%;
+                height: 10rem;
                 width: 100%;
                 border-radius: 15px 15px 0 0;
 
@@ -74,7 +71,7 @@
               & .card_img2{
                 background-image: url("./public/ressources/images/restaurants/Restaurant2.jpg");
                 background-size: cover;
-                height: 70%;
+                height: 10rem;
                 width: 100%;
                 border-radius: 15px 15px 0 0;
 
@@ -83,7 +80,7 @@
               & .card_img3{
                 background-image: url("./public/ressources/images/restaurants/Restaurant3.jpg");
                 background-size: cover;
-                height: 70%;
+                height: 10rem;
                 width: 100%;
                 border-radius: 15px 15px 0 0;
 
@@ -92,7 +89,7 @@
               & .card_img4{
                 background-image: url("./public/ressources/images/restaurants/Restaurant4.jpg");
                 background-size: cover;
-                height: 70%;
+                height: 10rem;
                 width: 100%;
                 border-radius: 15px 15px 0 0;
 
@@ -115,24 +112,29 @@
                 }
 
                 i{
-                    font-size: 2rem;
+                    font-size: 30px;
                     position: absolute;
-                    right: 1.5rem;
-                    top: 0.5rem;
+                    right: 7px;
+                    top: 6px;
                 }
               }
              
-
-              .fill{                
-                animation: reverse-color 2s;
-                
-               }
-              
-              .fill:hover{
+              .fill,
+              .heart .fill {
                 cursor: pointer;
-                color: transparent;
+                animation: reverse-color 0.5s;
+                color: black;
+                -webkit-text-fill-color: black;
+              
+              }
+              
+              .heart.fill:hover{
+                cursor: pointer;
+                color: black;
                 background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
                 background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
                 font-weight: 900;
                 animation:fill 3s ease-in-out;
 
