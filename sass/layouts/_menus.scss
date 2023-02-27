@@ -117,18 +117,17 @@
                     right: 7px;
                     top: 6px;
                 }
+
+                
               }
              
-              .fill,
-              .heart .fill {
+              
+              .fill {
                 cursor: pointer;
-                animation: reverse-color 0.5s;
-                color: black;
-                -webkit-text-fill-color: black;
-              
+                animation: reverse-color 1s;
+                              
               }
-              
-              .heart.fill:hover{
+              .fill:hover{
                 cursor: pointer;
                 color: black;
                 background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
@@ -139,6 +138,8 @@
                 animation:fill 3s ease-in-out;
 
               }
+              
+              
 
               }
 

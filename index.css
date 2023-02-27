@@ -296,14 +296,11 @@ main .location p {
   right: 7px;
   top: 6px;
 }
-.menus .card .fill,
-.menus .card .heart .fill {
+.menus .card .fill {
   cursor: pointer;
-  animation: reverse-color 0.5s;
-  color: black;
-  -webkit-text-fill-color: black;
+  animation: reverse-color 1s;
 }
-.menus .card .heart.fill:hover {
+.menus .card .fill:hover {
   cursor: pointer;
   color: black;
   background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
