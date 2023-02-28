@@ -142,8 +142,7 @@ header {
 }
 .loader h2, .loader h3, .loader p {
   font-family: "Roboto", sans-serif;
-  font-size: 35px;
-  align-content: center;
+  font-size: 25px;
   background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -151,8 +150,20 @@ header {
   position: absolute;
   line-height: 60px;
 }
+@media screen and (min-width: 1024px) {
+  .loader h2, .loader h3, .loader p {
+    display: grid;
+    font-size: 35px;
+    align-content: center;
+  }
+}
 .loader p {
-  padding: 100px;
+  padding: 75px;
+}
+@media screen and (min-width: 1024px) {
+  .loader p {
+    padding: 90px;
+  }
 }
 .loader .ustensil {
   display: grid;
