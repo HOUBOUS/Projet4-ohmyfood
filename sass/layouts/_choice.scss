@@ -28,7 +28,7 @@
    & ol{
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
     flex-direction: column;
     list-style-type: none;
     counter-reset: compteListe;
@@ -42,13 +42,13 @@
     white-space: nowrap;
 
     
-    @media screen and (min-width: variables.$break-point) {
+        @media screen and (min-width: variables.$break-point) {
         width: 30%;       
           
         }
 
     
-    &::before{
+     &::before{
         counter-increment: compteListe 1; 
         content: counter(compteListe) " ";
         color: #FFFFFF;
@@ -69,15 +69,15 @@
             
     }
 
-    i.fa-solid{
+        i.fa-solid{
         margin-right: 17px;
 
-    }
+        }
 
-    i.fa-solid:hover{
+        i.fa-solid:hover{
         color: variables.$purple;
 
-    }
+         }
     }
      
   }

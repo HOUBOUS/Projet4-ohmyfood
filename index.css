@@ -123,9 +123,9 @@ header {
   height: 100vh;
   inset: 0;
   z-index: 1;
-  opacity: 1;
-  animation: desappear 5s 6s forwards;
-  animation-delay: 4s;
+  opacity: 0.9;
+  animation: desappear 2s 3s forwards;
+  animation-delay: 1s;
   transform-origin: top;
 }
 .loader::after {
@@ -137,8 +137,8 @@ header {
   border-right: 5px solid transparent;
   border-top: 5px solid #9356DC;
   border-radius: 50%;
-  animation: spin 5s ease-in-out;
-  animation-iteration-count: 2;
+  animation: spin 3s ease-in-out;
+  animation-iteration-count: 3;
 }
 .loader h2, .loader h3, .loader p {
   font-family: "Roboto", sans-serif;
@@ -152,17 +152,15 @@ header {
 }
 @media screen and (min-width: 1024px) {
   .loader h2, .loader h3, .loader p {
-    display: grid;
     font-size: 35px;
-    align-content: center;
   }
 }
 .loader p {
-  padding: 85px;
+  padding: 90px;
 }
 @media screen and (min-width: 1024px) {
   .loader p {
-    padding: 95px;
+    padding-top: 110px;
   }
 }
 .loader .ustensil {
@@ -374,7 +372,7 @@ main .location p {
 .choice ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 30px;
   flex-direction: column;
   list-style-type: none;
   counter-reset: compteListe;
@@ -462,7 +460,7 @@ footer .footer_lists {
     justify-content: flex-end;
     gap: 40px;
     order: 1;
-    padding-right: 75px;
+    padding-right: 120px;
   }
 }
 
@@ -577,7 +575,7 @@ footer .footer_lists {
 }
 #pages_restaurants .menus_resto .menus_part .menu_details {
   display: flex;
-  margin: 4px;
+  margin: 0px;
   white-space: nowrap;
   overflow: hidden;
 }

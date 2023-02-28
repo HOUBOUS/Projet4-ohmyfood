@@ -137,13 +137,10 @@ header::before{
        
         .menu_details{
             display: flex;
-            margin: 4px; 
+            margin: 0px; 
             white-space: nowrap;
-            overflow: hidden; 
-           
-            
-            
-                         
+            overflow: hidden;        
+                                    
            .menu_details_informations{
                 padding: 16px 10px;
                 flex: 0 0 80%;
@@ -163,9 +160,8 @@ header::before{
                    white-space: nowrap; 
                     text-overflow: ellipsis;
                     overflow: hidden; 
-                   
-                }
-            
+
+                }            
             }
 
             .price{
@@ -176,8 +172,7 @@ header::before{
                 font-weight: bold;
                 flex: 0 0 20%;
                 padding-bottom: 16px;
-                padding-right: 10px;
-                
+                padding-right: 10px;                
                 
             }
 
