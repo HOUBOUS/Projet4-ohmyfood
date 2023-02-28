@@ -132,8 +132,8 @@ header {
   content: "";
   height: 400px;
   width: 400px;
-  padding: 30px;
-  font-size: 30px;
+  padding: 25px;
+  font-size: 25px;
   border-right: 5px solid transparent;
   border-top: 5px solid #9356DC;
   border-radius: 50%;
@@ -420,6 +420,7 @@ main .location p {
 
 .choice_lists :hover {
   transform: scale(1.02);
+  background-color: #F5EDFF;
 }
 
 footer {
