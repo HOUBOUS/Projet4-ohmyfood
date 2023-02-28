@@ -51,7 +51,7 @@ header{
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;      
       position: absolute;
-      line-height: 60px;
+      line-height: 80px;
       
       @media screen and (min-width: variables.$break-point) {
         display: grid;
@@ -64,10 +64,10 @@ header{
     }
 
     & p{
-      padding: 75px;
+      padding: 85px;
 
       @media screen and (min-width: variables.$break-point) {
-        padding: 90px;
+        padding: 95px;
                     
       }
     }

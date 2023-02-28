@@ -63,23 +63,27 @@ header::before{
           
         }        
   }
-}
 
-  
-.fill{                
+   
+.fill{    
+    cursor: pointer;            
     animation: reverse-color 2s;
     
    }
   
-  .fill:hover{
-    cursor: pointer;
-    color: transparent;
-    background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
-    background-clip: text;
-    font-weight: 900;
-    animation:fill 3s ease-in-out;
-
+    .heart .fill:hover{
+        cursor: pointer;
+        color: black;
+        background: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        animation:fill 3s ease-in-out;
   }
+}
+
+ 
 
 .menus_resto{
     padding: 16px;
@@ -89,7 +93,7 @@ header::before{
     gap: 15px;
     
 
-    @media screen and (min-width: variables.$break-point) {
+      @media screen and (min-width: variables.$break-point) {
         padding: 16px 170px;
         
       }

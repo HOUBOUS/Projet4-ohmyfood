@@ -148,7 +148,7 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  line-height: 60px;
+  line-height: 80px;
 }
 @media screen and (min-width: 1024px) {
   .loader h2, .loader h3, .loader p {
@@ -158,11 +158,11 @@ header {
   }
 }
 .loader p {
-  padding: 75px;
+  padding: 85px;
 }
 @media screen and (min-width: 1024px) {
   .loader p {
-    padding: 90px;
+    padding: 95px;
   }
 }
 .loader .ustensil {
@@ -516,14 +516,17 @@ footer .footer_lists {
   right: 1.5rem;
   top: 2rem;
 }
-#pages_restaurants .fill {
+#pages_restaurants .resto .fill {
+  cursor: pointer;
   animation: reverse-color 2s;
 }
-#pages_restaurants .fill:hover {
+#pages_restaurants .resto .heart .fill:hover {
   cursor: pointer;
-  color: transparent;
+  color: black;
   background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
   animation: fill 3s ease-in-out;
 }
