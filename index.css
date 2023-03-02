@@ -132,8 +132,6 @@ header {
   content: "";
   height: 400px;
   width: 400px;
-  padding: 25px;
-  font-size: 25px;
   border-right: 5px solid transparent;
   border-top: 5px solid #9356DC;
   border-radius: 50%;
@@ -180,7 +178,7 @@ header {
 
 @keyframes desappear {
   0% {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(0);
@@ -239,7 +237,7 @@ main .location p {
   content: "nouveau";
   position: absolute;
   height: 29px;
-  width: 23%;
+  width: 27%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -582,7 +580,7 @@ footer .footer_lists {
 #pages_restaurants .menus_resto .menus_part .menu_details .menu_details_informations {
   padding: 16px 10px;
   flex: 0 0 80%;
-  transition: flex-basis 2s linear;
+  transition: flex-basis 1s linear;
   overflow: hidden;
 }
 #pages_restaurants .menus_resto .menus_part .menu_details .menu_details_informations h4 {
@@ -622,7 +620,7 @@ footer .footer_lists {
   flex: 0 0 62%;
 }
 #pages_restaurants .menus_resto .menus_part .menu_details:hover .fa-check {
-  animation: checkSpin 2s ease-in-out;
+  animation: checkSpin 600ms ease-in-out;
 }
 @keyframes checkSpin {
   0% {

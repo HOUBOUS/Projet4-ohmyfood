@@ -122,10 +122,8 @@ header::before{
         @for $i from 2 through 4 {
             &:nth-child(#{$i}){
                 animation-delay: 100ms * $i;
-
             }
         }
-        
         background-color: #FFFFFF;
         border-radius: 15px;
         box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -144,8 +142,9 @@ header::before{
            .menu_details_informations{
                 padding: 16px 10px;
                 flex: 0 0 80%;
-                transition: flex-basis 2s linear;
+                transition: flex-basis 1s linear;
                 overflow: hidden;  
+                
 
                 h4{
                     white-space: nowrap; 
@@ -195,7 +194,7 @@ header::before{
                     }
 
                      & .fa-check{
-                        animation: checkSpin 2s ease-in-out;
+                        animation: checkSpin 600ms ease-in-out;
 
                     }
                          @keyframes checkSpin {
