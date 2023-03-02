@@ -252,7 +252,7 @@ header::before{
     background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     margin: 40px 0px;
-    
+    transition: all 600ms;
     
     &:hover{
         cursor: pointer;
